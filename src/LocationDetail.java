@@ -1,5 +1,3 @@
-package battleship;
-
 public class LocationDetail {
     Ship ship;
     Symbol symbol;

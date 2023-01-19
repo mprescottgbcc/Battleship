@@ -1,5 +1,3 @@
-package battleship;
-
 public class GameField {
     private final LocationDetail[][] grid;
 
