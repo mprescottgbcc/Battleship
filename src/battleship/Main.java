@@ -74,7 +74,7 @@ public class Main {
 
             do {
                 try {
-                    endPoints = SCANNER.nextLine().split(" ");
+                    endPoints = SCANNER.nextLine().trim().split(" ");
                     start = parsePosition(endPoints[0]);
                     end = parsePosition(endPoints[1]);
 
@@ -101,20 +101,9 @@ public class Main {
         System.out.println(bottom);
     }
 
-    private static boolean checkShotPosition(int[] position) throws Exception {
-        for (int p : position) {
-            if (p < 0 || p > 10) {
-                throw new Exception("Error: coordinates must be in the range A1 - J10");
-            }
-        }
-
-        return true;
-    }
-
     public static void main(String[] args) {
         Player player = Player.PLAYER1;
         int[] shotPosition;
-        int shipsLeft = requiredShips.length;
         LocationDetail shotInfo;
         String result;
         GameField activeField;
